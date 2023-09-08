@@ -1,5 +1,5 @@
 {
-    "name": "Stranger Music Bot",
+    "name": "Yuvi Music Bot",
     "description": "Telegram Group Calls streaming bot with some useful features, written in Python with Pyrogram and Py-Tgcalls. Supporting platforms like Youtube, Spotify, Resso, AppleMusic, Soundcloud and M3u8 Links.",
     "logo": "https://graph.org/file/d3fe3c288fdb37a70ca09.jpg",
     "keywords": [
@@ -70,12 +70,12 @@
       },
       "UPSTREAM_REPO": {
         "description": "If you dont know this, Leave as it is",
-        "value": "https://github.com/golujha9936/strangerbot",
+        "value": "https://github.com/Rishii7205/Yuvi_music",
         "required": true
       },
       "UPSTREAM_BRANCH": {
         "description": "Upstream Repo's Branch Name",
-        "value": "master",
+        "value": "main",
         "required": true
       }
     },
