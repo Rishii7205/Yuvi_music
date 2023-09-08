@@ -1,6 +1,6 @@
-from config import LOG, LOG_GROUP_ID
-from StrangerMusic import app
-from StrangerMusic.utils.database import is_on_off
+from config import LOG, LOG_GROUP_ID, MUSIC_BOT_NAME
+from AnonX import app
+from AnonX.utils.database import is_on_off
 
 
 async def play_logs(message, streamtype):
@@ -8,24 +8,24 @@ async def play_logs(message, streamtype):
         if message.chat.username:
             chatusername = f"@{message.chat.username}"
         else:
-            chatusername = "Private Group"
+            chatusername = "ᴩʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ"
         logger_text = f"""
-**Stranger PLAY LOG**
+**{MUSIC_BOT_NAME} ᴩʟᴀʏ ʟᴏɢɢᴇʀ**
 
-**Chat:** {message.chat.title} [`{message.chat.id}`]
-**User:** {message.from_user.mention}
-**Username:** @{message.from_user.username}
-**User ID:** `{message.from_user.id}`
-**Chat Link:** {chatusername}
+**ᴄʜᴀᴛ:** {message.chat.title} [`{message.chat.id}`]
+**ᴜsᴇʀ:** {message.from_user.mention}
+**ᴜsᴇʀɴᴀᴍᴇ:** @{message.from_user.username}
+**ɪᴅ:** `{message.from_user.id}`
+**ᴄʜᴀᴛ ʟɪɴᴋ:** {chatusername}
 
-**Query:** {message.text}
+**sᴇᴀʀᴄʜᴇᴅ ғᴏʀ:** {message.text}
 
-**StreamType:** {streamtype}"""
+**sᴛʀᴇᴀᴍ ᴛʏᴩᴇ:** {streamtype}"""
         if message.chat.id != LOG_GROUP_ID:
             try:
                 await app.send_message(
                     LOG_GROUP_ID,
-                    f"{logger_text}",
+                    text=logger_text,
                     disable_web_page_preview=True,
                 )
             except:
